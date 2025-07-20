@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ☀️ Smooth sunlight animation used in background glow */
+@keyframes sunlight {
+  0% {
+    transform: translate(-30px, -30px) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(0px, 0px) scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-30px, -30px) scale(1);
+    opacity: 0.2;
+  }
+}
+
+.animate-sunlight {
+  animation: sunlight 8s ease-in-out infinite;
+}
+
+/* 🌊 Optional: Wave animation class if you use animated waves (e.g. SVG or gradient backgrounds) */
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-wave {
+  animation: wave 15s linear infinite;
+}
+
+/* 💎 Optional: Glassmorphism utilities (if you want more custom blur effects later) */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
